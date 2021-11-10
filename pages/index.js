@@ -67,17 +67,17 @@ export default function Home() {
   return (
     <div className="flex justify-center">
       <div className="px-4" style={{ maxWidth: '1600px' }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-10">
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <model-viewer bounds="tight" src={nft.image} ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay> </model-viewer>
-                <div className="p-4">
-                  <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
+                <div className="p-2">
+                  <p style={{ height: '30px' }} className="text-2xl font-semibold text-center">{nft.name}</p>
                 </div>
-                <div className="p-4 bg-black">
-                  <p className="text-2xl mb-4 font-bold text-white">{nft.price} ETH</p>
-                  <button className="w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
+                <div className="p-2 bg-black">
+                  <p className="text-2xl mb-2 font-bold text-white">{nft.price} ETH</p>
+                  <button className="w-full bg-red-600 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
                 </div>
               </div>
             ))
