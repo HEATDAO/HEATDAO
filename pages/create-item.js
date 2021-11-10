@@ -4,6 +4,8 @@ import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 
+import "@google/model-viewer"
+
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 import {
@@ -101,7 +103,7 @@ export default function CreateItem() {
         />
         {
           fileUrl && (
-            <img className="rounded mt-4" width="350" src={fileUrl} />
+            <model-viewer bounds="tight" src={fileUrl} ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay> </model-viewer>
           )
         }
         <button onClick={createMarket} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
