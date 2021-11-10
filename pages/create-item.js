@@ -106,7 +106,7 @@ export default function CreateItem() {
             <model-viewer bounds="tight" src={fileUrl} ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay> </model-viewer>
           )
         }
-        <button onClick={createMarket} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+        <button onClick={createMarket} className="font-bold mt-4 bg-red-600 text-white rounded p-4 shadow-lg">
           Create Digital Asset
         </button>
       </div>
