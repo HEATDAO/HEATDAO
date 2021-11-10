@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import Link from 'next/link'
 
+import Script from 'next/script'
+
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -30,6 +32,7 @@ function MyApp({ Component, pageProps }) {
         </div>
       </nav>
       <Component {...pageProps} />
+      <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" />
     </div>
   )
 }
