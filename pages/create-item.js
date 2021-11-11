@@ -31,6 +31,7 @@ export default function CreateItem() {
       )
       const url = `https://ipfs.infura.io/ipfs/${added.path}`
       setFileUrl(url)
+      console.log('IPFS:', url)
     } catch (error) {
       console.log('Error uploading file: ', error)
     }  
@@ -47,6 +48,7 @@ export default function CreateItem() {
       const url = `https://ipfs.infura.io/ipfs/${added.path}`
       /* after file is uploaded to IPFS, pass the URL to save it on mainnet */
       createSale(url)
+      console.log(url)
     } catch (error) {
       console.log('Error uploading file: ', error)
     }  
