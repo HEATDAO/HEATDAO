@@ -7,3 +7,7 @@ body {
     background-color: #FFF6FF;
     font-family: 'Merriweather', serif;
 }
+
+.section{
+    padding: 75px 0;
+}
