@@ -7,8 +7,8 @@ import {
   nftmarketaddress, nftaddress
 } from '../config'
 
-import Market from '/Market.sol/NFTMarket.json'
-import NFT from '/NFT.sol/NFT.json'
+import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 
 export default function CreatorDashboard() {
   const [nfts, setNfts] = useState([])
@@ -59,7 +59,7 @@ export default function CreatorDashboard() {
     <div className="section">
       <h2 className="text-2xl py-2 ml-10">Items Created</h2>
       <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-5">
           {
             nfts.map((nft, i) => (
               <div key={i} className="border shadow rounded-xl overflow-hidden">
@@ -78,7 +78,7 @@ export default function CreatorDashboard() {
             <div>
               <h2 className="text-2xl py-2 ml-10">Items sold</h2>
               <div className="flex justify-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 pt-4">
                   {
                     sold.map((nft, i) => (
                       <div key={i} className="border shadow rounded-xl overflow-hidden">
